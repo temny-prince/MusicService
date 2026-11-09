@@ -1,0 +1,101 @@
+# ===== Виртуальные окружения =====
+.venv/
+venv/
+env/
+ENV/
+*.venv
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== Тестирование / покрытие =====
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Django (если используется) =====
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# ===== Переменные окружения и секреты =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== IDE / редакторы =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ===== Windows =====
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ===== macOS (на случай переноса) =====
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ===== Логи и временные файлы =====
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# ===== Прочее =====
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+node_modules/

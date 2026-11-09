@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "I`m ROCK",
+        "tracks": [
+            {
+                "id": "21816941",
+                "title": "Still Waiting",
+                "artist": "Sum 41",
+                "cover_uri": "https://avatars.yandex.net/get-music-content/32236/80e28ac3.a.2506062-1/100x100"
+            },
+            {
+                "id": "135435124",
+                "title": "The Rebel Path",
+                "artist": "BOANERGE MUSIC",
+                "cover_uri": "https://avatars.yandex.net/get-music-content/17784780/cce16caa.a.39996652-1/100x100"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "По вайбу",
+        "tracks": [
+            {
+                "id": "52187839",
+                "title": "Out For Blood",
+                "artist": "Sum 41",
+                "cover_uri": "https://avatars.yandex.net/get-music-content/108289/cd31311f.a.8098525-1/100x100"
+            }
+        ]
+    }
+]

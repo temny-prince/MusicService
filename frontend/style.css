@@ -1,0 +1,113 @@
+:root {
+    --bg: #000000; --panel: #140508; --neon: #ff003c; --text: #ffffff; --dim: #a3a3a3; --border: #3d1326;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.search-bar { display: flex; gap: 10px; padding: 15px; background: var(--panel); border-bottom: 1px solid var(--border); }
+.search-bar input { flex: 1; padding: 10px; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 4px; outline: none; transition: 0.3s; }
+.search-bar input:focus { border-color: var(--neon); box-shadow: 0 0 10px var(--neon); }
+.search-bar button { padding: 10px 20px; background: transparent; border: 1px solid var(--neon); color: var(--neon); cursor: pointer; font-weight: bold; border-radius: 4px; transition: 0.3s; }
+.search-bar button:hover { background: var(--neon); color: #000; box-shadow: 0 0 15px var(--neon); }
+.main { display: flex; flex: 1; overflow: hidden; }
+.col { padding: 15px; overflow-y: auto; }
+.col::-webkit-scrollbar { width: 5px; }
+.col::-webkit-scrollbar-thumb { background: var(--neon); }
+h2 { color: var(--neon); font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+ul { list-style: none; }
+li { padding: 10px; border-bottom: 1px solid var(--border); cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; align-items: center; }
+li:hover { background: var(--panel); border-left: 3px solid var(--neon); padding-left: 7px; }
+.results { flex: 1; border-right: 1px solid var(--border); }
+.playlists { width: 220px; border-right: 1px solid var(--border); }
+.tracks { flex: 1; }
+.btn-sm { background: transparent; border: 1px solid var(--border); color: var(--dim); padding: 2px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; }
+.btn-sm:hover { border-color: var(--neon); color: var(--neon); }
+.player { padding: 15px; background: var(--panel); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.controls button { background: none; border: none; color: var(--text); font-size: 20px; cursor: pointer; margin: 0 5px; transition: 0.2s; }
+.controls button:hover { color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+#play-btn { font-size: 28px; color: var(--neon); }
+.active-repeat { color: var(--neon) !important; text-shadow: 0 0 10px var(--neon); }
+.now-playing { font-size: 13px; color: var(--dim); }
+.now-playing span { color: var(--text); font-weight: bold; }
+
+/* Стили для иконок */
+.track-item { display: flex; align-items: center; gap: 10px; width: 100%; }
+.track-cover { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; background: var(--border); }
+.track-info { display: flex; flex-direction: column; flex: 1; }
+.track-title { font-weight: bold; font-size: 14px; }
+.track-artist { font-size: 12px; color: var(--dim); }
+/* Обновленный плеер */
+.track-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.now-playing {
+    font-size: 13px;
+    color: var(--dim);
+}
+.now-playing span {
+    color: var(--text);
+    font-weight: bold;
+}
+
+.time-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--dim);
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--border);
+    border-radius: 2px;
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: var(--neon);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    box-shadow: 0 0 5px var(--neon);
+}
+input[type=range]:disabled::-webkit-slider-thumb {
+    background: var(--dim);
+    box-shadow: none;
+}
+
+/* Кнопки управления плейлистом (добавляются динамически) */
+.playlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playlist-actions {
+    display: flex;
+    gap: 5px;
+}
+.playlist-actions button {
+    background: none;
+    border: none;
+    color: var(--dim);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+}
+.playlist-actions button:hover {
+    color: var(--neon);
+}

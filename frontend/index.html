@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Поиск музыки..." onkeypress="if(event.key==='Enter') doSearch()">
+        <button onclick="doSearch()">ПОИСК</button>
+    </div>
+    <div class="main">
+        <div class="col results">
+            <h2>Результаты поиска</h2>
+            <ul id="search-results"></ul>
+        </div>
+        <div class="col playlists">
+            <h2>Плейлисты <button class="btn-sm" onclick="createPlaylist()">+</button></h2>
+            <ul id="playlist-list"></ul>
+        </div>
+        <div class="col tracks">
+            <h2 id="playlist-title">Выберите плейлист</h2>
+            <ul id="playlist-tracks"></ul>
+        </div>
+    </div>
+
+    <!-- Обновленный плеер с ползунком -->
+    <div class="player">
+        <div class="track-info-container">
+            <div class="now-playing" id="now-playing">Ничего не играет</div>
+            <div class="time-display">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100" step="0.1" disabled>
+                <span id="total-time">0:00</span>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="repeat-btn" onclick="toggleRepeat()">🔁</button>
+            <button onclick="prevTrack()">⏮</button>
+            <button id="play-btn" onclick="togglePlay()">▶</button>
+            <button onclick="nextTrack()">⏭</button>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
